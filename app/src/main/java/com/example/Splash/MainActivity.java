@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button b1 = findViewById(R.id.button1);
         ImageView i1 = findViewById(R.id.pdf_preview);
         i1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,12 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 openPdf();
             }
         });
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showNotification(getApplicationContext());
-            }
-        });
+
         customReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
